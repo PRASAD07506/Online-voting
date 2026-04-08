@@ -239,18 +239,18 @@ try {
                             </div>
                         </div>
 
-                        <button class="btn btn-success w-100 py-2 register-submit" name="register" id="faceSubmitButton" disabled>
+                        <button class="btn w-100 py-2 register-submit auth-submit-btn auth-submit-user-register" name="register" id="faceSubmitButton" disabled>
                             <span>Register</span>
                         </button>
                     </form>
 
                     <div class="text-center mt-4">
                         <span class="text-muted">Already have an account?</span>
-                        <a href="user_login.php" class="text-decoration-none fw-semibold">User Login</a>
+                        <a href="user_login.php" class="btn auth-link-btn auth-link-user">User Login</a>
                     </div>
 
                     <div class="text-center mt-2">
-                        <a href="admin_login.php" class="text-decoration-none">Admin Login</a>
+                        <a href="admin_login.php" class="btn auth-link-btn auth-link-admin">Admin Login</a>
                     </div>
 
                     <div class="text-center mt-4 register-footer">

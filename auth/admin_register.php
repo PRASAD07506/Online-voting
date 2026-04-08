@@ -106,11 +106,11 @@ if(isset($_POST['register_admin'])){
                     <input type="password" name="access_code" class="form-control" placeholder="Admin registration code" required>
                 </div>
 
-                <button class="btn btn-dark w-100 py-2" name="register_admin">Register Admin</button>
+                <button class="btn w-100 py-2 register-submit auth-submit-btn auth-submit-admin-register" name="register_admin"><span>Register Admin</span></button>
             </form>
 
             <div class="text-center mt-4">
-                <a href="admin_login.php" class="text-decoration-none fw-semibold">Back to Admin Login</a>
+                <a href="admin_login.php" class="btn auth-link-btn auth-link-admin">Back to Admin Login</a>
             </div>
         </div>
     </div>

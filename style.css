@@ -3,15 +3,21 @@
 :root {
     --font-body: "Manrope", "Segoe UI", sans-serif;
     --font-heading: "Sora", "Trebuchet MS", sans-serif;
+    --shell-top: #fffaf3;
+    --shell-mid: #f4f8ff;
+    --shell-bottom: #eef4fb;
+    --shell-text: #0f172a;
 }
 
 body.app-shell {
     font-family: var(--font-body);
     min-height: 100vh;
+    color: var(--shell-text);
     background:
-        radial-gradient(circle at top left, rgba(13, 110, 253, 0.15), transparent 32%),
-        radial-gradient(circle at bottom right, rgba(25, 135, 84, 0.14), transparent 28%),
-        linear-gradient(180deg, #f8fbff 0%, #eef3f8 100%);
+        radial-gradient(circle at 12% 10%, rgba(255, 153, 51, 0.2), transparent 28%),
+        radial-gradient(circle at 86% 14%, rgba(13, 110, 253, 0.16), transparent 30%),
+        radial-gradient(circle at 76% 86%, rgba(25, 135, 84, 0.14), transparent 28%),
+        linear-gradient(180deg, var(--shell-top) 0%, var(--shell-mid) 52%, var(--shell-bottom) 100%);
 }
 
 :root {
@@ -493,7 +499,7 @@ textarea,
     gap: 1rem;
     padding: 1rem;
     border-radius: 1rem;
-    background: rgba(255, 255, 255, 0.72);
+    background: rgba(66, 95, 203, 0.72);
     border: 1px solid rgba(15, 23, 42, 0.06);
     animation: revealUp 0.6s ease both;
     transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease, background 0.25s ease;
@@ -974,9 +980,11 @@ textarea,
     position: relative;
     overflow: hidden;
     border: 0;
-    background: linear-gradient(135deg, #157347, #198754 55%, #1fb56f);
-    box-shadow: 0 1rem 1.8rem rgba(25, 135, 84, 0.22);
-    transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+    border-radius: 0.95rem;
+    color: #fff;
+    background: linear-gradient(135deg, #16a34a, #15803d 55%, #166534);
+    box-shadow: 0 1rem 1.8rem rgba(22, 163, 74, 0.24);
+    transition: transform 0.24s ease, box-shadow 0.24s ease, filter 0.24s ease;
 }
 
 .register-submit::before {
@@ -990,8 +998,9 @@ textarea,
 
 .register-submit:hover {
     transform: translateY(-2px);
-    box-shadow: 0 1.25rem 2rem rgba(25, 135, 84, 0.28);
+    box-shadow: 0 1.2rem 2rem rgba(22, 163, 74, 0.3);
     filter: saturate(1.05);
+    color: #fff;
 }
 
 .register-submit span {
@@ -2139,7 +2148,7 @@ html:not([data-theme="dark"]) .theme-toggle-stars {
     position: relative;
     overflow: hidden;
     border-radius: 1.9rem;
-    background: linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(250, 252, 255, 0.92));
+    background: linear-gradient(180deg, rgba(255, 255, 255, 0.97), rgba(248, 252, 255, 0.94));
     border: 1px solid rgba(148, 163, 184, 0.16);
     box-shadow: 0 1.8rem 3.2rem rgba(15, 23, 42, 0.1);
 }
@@ -2170,6 +2179,9 @@ html:not([data-theme="dark"]) .theme-toggle-stars {
 .landing-official-copy {
     position: relative;
     z-index: 1;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
 }
 
 .landing-govt-strip-official {
@@ -2263,6 +2275,141 @@ html:not([data-theme="dark"]) .theme-toggle-stars {
     display: flex;
     flex-wrap: wrap;
     gap: 0.85rem;
+    align-items: center;
+}
+
+.landing-portal-btn {
+    position: relative;
+    overflow: hidden;
+    border: 0;
+    border-radius: 999px;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #fff;
+    box-shadow: 0 0.95rem 1.95rem rgba(15, 23, 42, 0.16);
+    transition: transform 0.24s ease, box-shadow 0.24s ease, filter 0.24s ease, opacity 0.24s ease;
+}
+
+.landing-portal-btn::after {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.38) 50%, transparent 76%);
+    transform: translateX(-135%);
+    transition: transform 0.6s ease;
+}
+
+.landing-portal-btn:hover {
+    color: #fff;
+    transform: translateY(-2px) scale(1.02);
+    box-shadow: 0 1.25rem 2.2rem rgba(15, 23, 42, 0.2);
+}
+
+.landing-portal-btn:hover::after {
+    transform: translateX(135%);
+}
+
+.portal-user-login {
+    background: linear-gradient(135deg, #2563eb, #0ea5e9 56%, #06b6d4);
+}
+
+.portal-user-register {
+    background: linear-gradient(135deg, #14b8a6, #10b981 56%, #22c55e);
+}
+
+.portal-admin-login {
+    background: linear-gradient(135deg, #f97316, #ef4444 55%, #dc2626);
+}
+
+.portal-admin-register {
+    background: linear-gradient(135deg, #eab308, #f97316 52%, #f43f5e);
+}
+
+.auth-submit-btn {
+    position: relative;
+    overflow: hidden;
+    border: 0;
+    border-radius: 0.95rem;
+    font-weight: 700;
+    letter-spacing: 0.01em;
+    color: #fff;
+    box-shadow: 0 0.95rem 1.8rem rgba(15, 23, 42, 0.16);
+    transition: transform 0.22s ease, box-shadow 0.22s ease, filter 0.22s ease;
+}
+
+.auth-submit-btn::before {
+    content: "";
+    position: absolute;
+    inset: 0;
+    background: linear-gradient(120deg, transparent 20%, rgba(255, 255, 255, 0.36) 50%, transparent 74%);
+    transform: translateX(-130%);
+    transition: transform 0.55s ease;
+}
+
+.auth-submit-btn:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 1.2rem 2.1rem rgba(15, 23, 42, 0.22);
+    filter: brightness(1.03);
+    color: #fff;
+}
+
+.auth-submit-btn:hover::before {
+    transform: translateX(130%);
+}
+
+.auth-submit-user {
+    background: linear-gradient(135deg, #2563eb, #0ea5e9 56%, #06b6d4);
+}
+
+.auth-submit-admin {
+    background: linear-gradient(135deg, #f97316, #ef4444 58%, #dc2626);
+}
+
+.auth-submit-user-register {
+    background: linear-gradient(135deg, #14b8a6, #10b981 56%, #22c55e);
+    box-shadow: 0 0.95rem 1.8rem rgba(16, 185, 129, 0.3);
+}
+
+.auth-submit-admin-register {
+    background: linear-gradient(135deg, #eab308, #f97316 56%, #f43f5e);
+    box-shadow: 0 0.95rem 1.8rem rgba(249, 115, 22, 0.3);
+}
+
+.auth-submit-btn:disabled,
+.register-submit:disabled {
+    opacity: 0.6;
+    filter: saturate(0.8);
+    cursor: not-allowed;
+}
+
+.auth-link-btn {
+    border: 0;
+    border-radius: 999px;
+    color: #fff;
+    font-weight: 700;
+    font-size: 0.9rem;
+    padding: 0.42rem 0.9rem;
+    box-shadow: 0 0.65rem 1.3rem rgba(15, 23, 42, 0.18);
+    transition: transform 0.2s ease, box-shadow 0.2s ease, filter 0.2s ease;
+}
+
+.auth-link-btn:hover {
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 0.85rem 1.45rem rgba(15, 23, 42, 0.24);
+    filter: brightness(1.03);
+}
+
+.auth-link-user {
+    background: linear-gradient(135deg, #2563eb, #0ea5e9 56%, #06b6d4);
+}
+
+.auth-link-admin {
+    background: linear-gradient(135deg, #f97316, #ef4444 58%, #dc2626);
+}
+
+.auth-link-admin-register {
+    background: linear-gradient(135deg, #eab308, #f97316 56%, #f43f5e);
 }
 
 .landing-official-points {
@@ -2420,6 +2567,15 @@ html:not([data-theme="dark"]) .theme-toggle-stars {
         grid-template-columns: 1fr;
     }
 
+    .landing-official-copy {
+        align-items: center;
+        text-align: center;
+    }
+
+    .landing-official-actions {
+        justify-content: center;
+    }
+
     .landing-official-visual {
         min-height: 460px;
     }
@@ -2530,4 +2686,57 @@ html:not([data-theme="dark"]) .theme-toggle-stars {
         animation: none !important;
         transition: none !important;
     }
+}
+
+/* ===== BUTTON DESIGN (FULL) ===== */
+
+.btn {
+    display: inline-block;
+    padding: 12px 22px;
+    border-radius: 12px;
+    font-weight: 600;
+    text-decoration: none;
+    border: none;
+    transition: all 0.3s ease;
+    box-shadow: 0 8px 18px rgba(0,0,0,0.1);
+}
+
+/* User Login */
+.btn-user-login {
+    background: linear-gradient(135deg, #0d6efd, #0b5ed7);
+    color: #fff;
+}
+.btn-user-login:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #0b5ed7, #084298);
+}
+
+/* Register */
+.btn-register {
+    background: linear-gradient(135deg, #20c997, #198754);
+    color: #fff;
+}
+.btn-register:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #198754, #146c43);
+}
+
+/* Admin Login */
+.btn-admin-login {
+    background: linear-gradient(135deg, #ffc107, #e0a800);
+    color: #000;
+}
+.btn-admin-login:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #e0a800, #c69500);
+}
+
+/* Admin Register */
+.btn-admin-register {
+    background: linear-gradient(135deg, #dc3545, #bb2d3b);
+    color: #fff;
+}
+.btn-admin-register:hover {
+    transform: translateY(-3px);
+    background: linear-gradient(135deg, #bb2d3b, #a52834);
 }

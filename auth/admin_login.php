@@ -68,7 +68,7 @@ if(isset($_POST['login'])){
                     </div>
                 </div>
 
-                <button class="btn btn-dark w-100 py-2 landing-action" name="login">Admin Login</button>
+                <button class="btn w-100 py-2 landing-action auth-submit-btn auth-submit-admin" name="login">Admin Login</button>
             </form>
 
             <div class="auth-float-note">
@@ -77,10 +77,10 @@ if(isset($_POST['login'])){
             </div>
 
             <div class="text-center mt-4">
-                <a href="admin_register.php" class="text-decoration-none fw-semibold">Admin Register</a>
+                <a href="admin_register.php" class="btn auth-link-btn auth-link-admin-register">Admin Register</a>
             </div>
             <div class="text-center mt-2">
-                <a href="user_login.php" class="text-decoration-none">Go to User Login</a>
+                <a href="user_login.php" class="btn auth-link-btn auth-link-user">Go to User Login</a>
             </div>
         </div>
     </div>

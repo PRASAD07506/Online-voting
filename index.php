@@ -43,10 +43,10 @@
                             </div>
 
                             <div class="landing-official-actions mb-4">
-                                <a href="auth/user_login.php" class="btn btn-primary btn-lg px-4 landing-action">User Login</a>
-                                <a href="auth/register.php" class="btn btn-outline-primary btn-lg px-4 landing-action">Register</a>
-                                <a href="auth/admin_login.php" class="btn btn-dark btn-lg px-4 landing-action">Admin Login</a>
-                                <a href="auth/admin_register.php" class="btn btn-outline-dark btn-lg px-4 landing-action">Admin Register</a>
+                                <a href="auth/user_login.php" class="btn btn-lg px-4 landing-action btn-user-login">User Login</a>
+                                <a href="auth/register.php" class="btn btn-lg px-4 landing-action btn-register">Register</a>
+                                <a href="auth/admin_login.php" class="btn btn-lg px-4 landing-action btn-admin-login">Admin Login</a>
+                                <a href="auth/admin_register.php" class="btn btn-lg px-4 landing-action btn-admin-register">Admin Register</a>
                             </div>
 
                             <div class="landing-official-points">
