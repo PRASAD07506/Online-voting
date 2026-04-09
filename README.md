@@ -100,27 +100,6 @@ php-project/
 
 ---
 
-## 👥 Collaboration
-
-This project is open for collaboration.
-
-### Steps:
-
-1. Fork the repository
-2. Clone it:
-
-   ```
-   git clone https://github.com/your-username/Online-voting.git
-   ```
-3. Create a branch:
-
-   ```
-   git checkout -b feature-name
-   ```
-4. Commit changes and push
-
----
-
 ## 📌 Future Improvements
 
 * Email Verification
